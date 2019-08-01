@@ -1,7 +1,9 @@
+# This version reads in an input as a stock symbol
+
 import requests
 from bs4 import BeautifulSoup
 import matplotlib.pyplot as plt
-import numpy as np
+# import numpy as np
 
 # url = 'https://finance.yahoo.com/quote/FAS/options?date=1564704000'
 begin_url = 'https://finance.yahoo.com/quote/'

@@ -1,7 +1,9 @@
+# This version reads a text file filled with stock symbols
+
 import requests
 from bs4 import BeautifulSoup
 import matplotlib.pyplot as plt
-import numpy as np
+# import numpy as np
 
 """
 def find_index(array):
