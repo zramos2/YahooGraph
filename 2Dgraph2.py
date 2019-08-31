@@ -10,9 +10,9 @@ def next_page(url):
     return url2
 
 
-url = 'https://finance.yahoo.com/quote/FAS/options?date=1564704000'
+#url = 'https://finance.yahoo.com/quote/FAS/options?date=1564704000'
 # url = 'https://finance.yahoo.com/quote/FAS/options/'
-
+url = 'https://finance.yahoo.com/quote/AMD/options?p=AMD'
 r = requests.get(url)
 # r = requests.get(next_page(url))
 

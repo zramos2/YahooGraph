@@ -42,7 +42,13 @@ for line in textfile:
         strike_price = float(strike_price)
         strike.append(strike_price)
         open_interest = row.select_one('.data-col9').text.strip()
-        open_interest = int(open_interest.replace(',', ''))
+        if open_interest.find(',') != -1:
+            open_interest = int(open_interest.replace(',', ''))
+        elif open_interest.find('-') != -1:
+            open_interst = 0
+        else:
+            #print('open_interest: ', open_interest)
+            open_interest = int(open_interest)
         interest.append(open_interest)
         get_index += 1
 
