@@ -45,9 +45,8 @@ for line in textfile:
         if open_interest.find(',') != -1:
             open_interest = int(open_interest.replace(',', ''))
         elif open_interest.find('-') != -1:
-            open_interst = 0
+            open_interest = 0
         else:
-            #print('open_interest: ', open_interest)
             open_interest = int(open_interest)
         interest.append(open_interest)
         get_index += 1

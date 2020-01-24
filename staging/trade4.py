@@ -32,7 +32,13 @@ for row in rows:
     strike_price = float(strike_price)
     strike.append(strike_price)
     open_interest = row.select_one('.data-col9').text.strip()
-    open_interest = int(open_interest.replace(',', ''))
+    if open_interest.find(',') != -1:
+        open_interest = int(open_interest.replace(',', ''))
+    elif open_interest.find('-') != -1:
+        open_interest = 0
+    else:
+        open_interest = int(open_interest)
+
     interest.append(open_interest)
 """
 print(strike[0])
@@ -45,8 +51,7 @@ graph = fig.add_axes([0.1, 0.1, 0.9, 0.9])
 graph.scatter(interest, strike)
 graph.set_xlabel('Open Interest')
 graph.set_ylabel('Strike Price')
-#plt.show()
-plt.show(block=False)
-plt.pause(3)
-plt.close()
-
+plt.show()
+#plt.show(block=False)
+#plt.pause(3)
+#plt.close()
