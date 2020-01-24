@@ -5,7 +5,7 @@ python:
 install:
  - pip install requests
  - pip install beautifulsoup4
- - pip install matplotlib.pyplot
+ - pip install matplotlib
 
 script:
  - python 2Dgraph4.py
