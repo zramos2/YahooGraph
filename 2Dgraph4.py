@@ -30,7 +30,13 @@ while(stock_symbol != 'ZZZ'):
         strike_price = float(strike_price)
         strike.append(strike_price)
         open_interest = row.select_one('.data-col9').text.strip()
-        open_interest = int(open_interest.replace(',', ''))
+        if open_interest.find(',') != -1:
+            open_interest = int(open_interest.replace(',', ''))
+        elif open_interest.find('-') != -1:
+            open_interest = 0
+        else:
+            open_interest = int(open_interest)
+
         interest.append(open_interest)
     """
     print(strike[0])

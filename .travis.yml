@@ -1,0 +1,6 @@
+language: python
+python:
+ - "3.7"
+
+script:
+ - python 2Dgraph4.py
