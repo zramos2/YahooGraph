@@ -8,4 +8,4 @@ install:
  - pip install matplotlib
 
 script:
- - python trade4.py
+ - python graph.py
